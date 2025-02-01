@@ -1,36 +1,39 @@
 # Web-Summarizer-Chatbot-v0.5
 
-A chatbot, built with OpenAI GPT model in chainlit user interface, that harnesses the power of GPT agents, function calling, and RAG to offer an enhanced conversational experience. 
+A chatbot built with the OpenAI GPT model in the Chainlit user interface, leveraging GPT agents, function calling, and Retrieval-Augmented Generation (RAG) to enhance conversational capabilities.
 
-#### Here's how you can make the most of its diverse functionalities:
-**Normal ChatGPT Interaction:**
-Engage in natural conversations as you would with a regular ChatGPT app, experiencing seamless communication.
+## Features
 
-**Chat with Websites using RAG:**
-Unleash the potential of the #RAG technique by sharing a website link with the chatbot. Initiate in-depth discussions and pose detailed questions about the content of the specified website.
+### **1. Normal ChatGPT Interaction**
+Engage in natural conversations as with a regular ChatGPT application, ensuring seamless communication.
 
-**Website Summarization:**
-Request the chatbot to provide a comprehensive summary of an entire website in a single interaction. Streamline your information retrieval process with this efficient summarization feature.
+### **2. Chat with Websites using RAG**
+Utilize the **RAG** technique by providing a website link. The chatbot processes the website's content, enabling in-depth discussions and detailed queries.
 
-**Web Search with DocDocGo Integration:**
-Access the vast knowledge of the web by leveraging the chatbot's connection to the DocDocGo search engine. Simply input your query, and watch as the chatbot fetches relevant links and information from the web in response.
+### **3. Website Summarization**
+Request a comprehensive summary of an entire website in a single interaction, streamlining information retrieval.
+
+### **4. Web Search with DocDocGo Integration**
+Leverage the chatbot’s connection to the **DocDocGo** search engine for live web searches. Enter a query, and the chatbot retrieves relevant links and information.
 
 ## Chainlit User Interface
 <div align="center">
   <img src="images/WebRAGQueryUI.png" alt="UI">
 </div>
 
-### Tomlinson Website:
+## Example Queries and Logs
+
+### **Tomlinson Website Example**
 <div align="center">
   <img src="images/website.png" alt="website">
 </div>
 
-### LLM function caller log for the first query shown in chainlit user interface image 
+### **Function Caller Log for First Query**
 <div align="center">
   <img src="images/first_query_log.png" alt="first_query_log">
 </div>
 
-### LLM function caller log for the second query shown in chainlit user interface image 
+### **Function Caller Log for Second Query**
 <div align="center">
   <img src="images/second_query_log.png" alt="second_query_log">
 </div>
@@ -42,25 +45,27 @@ Access the vast knowledge of the web by leveraging the chatbot's connection to t
 
 ## Running the Project
 
-To get the project up and running, you'll need to set up your environment and install the necessary dependencies. You can do this in two ways:
+The project requires setting up the environment and installing dependencies. This can be done using one of the following methods:
 
-### Option 1: Using the Parent Directory Instructions
-Activate your python environment and run:
+### **Option 1: Using the Parent Directory Instructions**
+Activate the Python environment and install dependencies:
+
 ```
 pip install -r requirements.txt
 ```
 
-1. **Configuration and Execution**
+### **1. Configuration and Execution**
+- Navigate to the `configs` folder and update the `app_config.yml` file if necessary.
+- Create a `.env` file in the project folder and add the GPT API credentials.
 
-- Go to the `configs` folder and update the `app_config.yml` file if needed.
-- In your project folder, create a `.env` file and add your GPT API credentials.
+For **OpenAI**:
 
-If you're using OpenAI directly:
 ```
 OPENAI_API_KEY=
 ```
 
-If you're using Azure OpenAI:
+For **Azure OpenAI**:
+
 ```
 OPENAI_API_TYPE=
 OPENAI_API_VERSION=
@@ -70,25 +75,35 @@ gpt_deployment_name=
 embed_deployment_name=
 ```
 
-2. **Activate Your Environment.**
-3. **Run the Application:**
+### **2. Activate the Environment**
+Ensure the virtual environment is active before running the application.
 
-In Terminal:
+### **3. Run the Application**
+Start the chatbot using the following command:
 
 ```
-chainlit run src\app.py -h
+chainlit run src/app.py -h
 ```
 
-The project includes an automatic directory creation feature within the WebRAGQuery directory. Specifically, it generates two folders:
+## Automatic Directory Management
 
-1. `memory`: This directory is designed to store essential information for each user session. It will create and maintain a separate CSV file for each session, preserving the chat history.
-2. `vectordb`: This directory is dedicated to holding chromaDB folders, each corresponding to a specific URL requested by the user. At the onset of each session, this folder is regenerated, ensuring a clean slate. Any existing vectorDBs from previous sessions are automatically purged to maintain a tidy and up-to-date workspace.
+The project automatically creates essential directories within the `WebRAGQuery` directory:
 
-## Sample prompts
-Sample prompts for triggring different functionalities of the Chatbot:
+1. **`memory`** – Stores essential session data, maintaining a separate CSV file for each session to preserve chat history.
+2. **`vectordb`** – Stores **chromaDB** folders, each corresponding to a requested URL. At the start of each session, the folder is regenerated, ensuring a clean slate while purging outdated vectorDBs from previous sessions.
 
-1. To prepare a website for RAG: `Prepare this link for q and a <your desired link>`
-2. To give a full summarization of a website: `summarize this website for me <your desired link>`
-3. To search the web for a specific content (e.g videos): `I am looking for videos that explain how to train a large language model`
-4. To use its own knowledge (e.g debug a python code): `debug the following code <your code and the error>`
+## Sample Prompts
 
+Use the following prompts to trigger different chatbot functionalities:
+
+1. **Prepare a website for RAG:**  
+   `Prepare this link for q and a <your desired link>`
+
+2. **Summarize an entire website:**  
+   `Summarize this website for me <your desired link>`
+
+3. **Search the web for specific content (e.g., videos):**  
+   `I am looking for videos that explain how to train a large language model`
+
+4. **Debug Python code using internal knowledge:**  
+   `Debug the following code <your code and the error>`
