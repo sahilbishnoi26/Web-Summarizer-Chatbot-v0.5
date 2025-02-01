@@ -1,6 +1,6 @@
-# WebRAGQuery: Combining WebGPT and RAG-GPT
+# Web-Summarizer-Chatbot-v0.5
 
-**WebRAGQuery** WebRAGQuery is a powerful chatbot, built with OpenAI GPT model in chainlit user interface, that harnesses the power of GPT agents, function calling, and RAG to offer an enhanced conversational experience. 
+A chatbot, built with OpenAI GPT model in chainlit user interface, that harnesses the power of GPT agents, function calling, and RAG to offer an enhanced conversational experience. 
 
 #### Here's how you can make the most of its diverse functionalities:
 **Normal ChatGPT Interaction:**
@@ -50,13 +50,6 @@ Activate your python environment and run:
 pip install -r requirements.txt
 ```
 
-### Option 2: Installing Dependencies Individually
-If you prefer to install the dependencies individually, run the following command:
-
-```
-pip install chainlit==0.7.700 duckduckgo-search==4.1.1 openai==0.28.0 chromadb==0.4.22 fake-useragent==1.4.0 pydantic==2.5.1 langchain==0.0.354 bs4==0.0.1 tiktoken==0.5.2 pandas==2.1.4
-```
-
 1. **Configuration and Execution**
 
 - Go to the `configs` folder and update the `app_config.yml` file if needed.
@@ -78,8 +71,7 @@ embed_deployment_name=
 ```
 
 2. **Activate Your Environment.**
-3. **Ensure you are in the WebRAGQuery directory**
-4. **Run the Application:**
+3. **Run the Application:**
 
 In Terminal:
 
@@ -99,16 +91,4 @@ Sample prompts for triggring different functionalities of the Chatbot:
 2. To give a full summarization of a website: `summarize this website for me <your desired link>`
 3. To search the web for a specific content (e.g videos): `I am looking for videos that explain how to train a large language model`
 4. To use its own knowledge (e.g debug a python code): `debug the following code <your code and the error>`
-
-**YouTube video:** [Link](https://www.youtube.com/watch?v=KoWjy5PZdX0&t=266s)
-
-**Slides:** [Link](https://github.com/Farzad-R/LLM-Zero-to-Hundred/blob/master/presentation/presentation.pdf)
-
-**Extra read:**
-- [GPT model](https://platform.openai.com/docs/models/overview) 
-- [duckduckgo-search](https://pypi.org/project/duckduckgo-search/)
-- [chainlit](https://docs.chainlit.io/get-started/overview)
-- [Langchain](https://python.langchain.com/docs/get_started/quickstart)
-- [ChromaDB](https://www.trychroma.com/)
-
 
