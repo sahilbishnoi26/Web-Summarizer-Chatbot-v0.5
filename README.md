@@ -18,7 +18,7 @@ Leverage the chatbot’s connection to the **DocDocGo** search engine for live w
 
 ## Chainlit User Interface
 <div align="center">
-  <img src="images/WebRAGQueryUI.png" alt="UI">
+  <img src="images/web_ui.png" alt="UI">
 </div>
 
 ## Example Queries and Logs
