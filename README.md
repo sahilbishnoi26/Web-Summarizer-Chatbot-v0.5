@@ -13,8 +13,8 @@ Utilize the **RAG** technique by providing a website link. The chatbot processes
 ### **3. Website Summarization**
 Request a comprehensive summary of an entire website in a single interaction, streamlining information retrieval.
 
-### **4. Web Search with DocDocGo Integration**
-Leverage the chatbot’s connection to the **DocDocGo** search engine for live web searches. Enter a query, and the chatbot retrieves relevant links and information.
+### **4. Web Search with DuckDuckGo Integration**
+Leverage the chatbot’s connection to the **DuckDuckGo** search engine for live web searches. Enter a query, and the chatbot retrieves relevant links and information.
 
 ## Chainlit User Interface
 <div align="center">
